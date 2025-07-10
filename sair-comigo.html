@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Quer sair comigo?</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+      background-color: #f0f8ff;
+    }
+    h1 {
+      font-size: 2em;
+      color: #333;
+    }
+    #botoes {
+      margin-top: 30px;
+      position: relative;
+      height: 200px;
+    }
+    .botao {
+      padding: 15px 30px;
+      font-size: 1.2em;
+      margin: 10px;
+      cursor: pointer;
+      border: none;
+      border-radius: 10px;
+    }
+    #sim {
+      background-color: #4CAF50;
+      color: white;
+    }
+    #nao {
+      background-color: #f44336;
+      color: white;
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+  <h1>Você quer sair comigo?</h1>
+  <div id="botoes">
+    <button class="botao" id="sim" onclick="respostaSim()">Sim</button>
+    <button class="botao" id="nao">Não</button>
+  </div>
+
+  <script>
+    const botaoNao = document.getElementById('nao');
+
+    botaoNao.addEventListener('mouseover', () => {
+      const larguraTela = window.innerWidth;
+      const alturaTela = window.innerHeight;
+
+      const novaPosX = Math.random() * (larguraTela - 100);
+      const novaPosY = Math.random() * (alturaTela - 100);
+
+      botaoNao.style.left = `${novaPosX}px`;
+      botaoNao.style.top = `${novaPosY}px`;
+    });
+
+    function respostaSim() {
+      alert('Ebaaaa! 😍💖');
+    }
+  </script>
+</body>
+</html>
